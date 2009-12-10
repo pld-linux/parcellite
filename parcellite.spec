@@ -15,6 +15,8 @@ BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 2.14.0
 BuildRequires:	gtk+2-devel >= 2.10.0
 BuildRequires:	intltool
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
@@ -39,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__automake}
 %{__autoconf}
 
-%configure 
+%configure
 
 %{__make}
 
