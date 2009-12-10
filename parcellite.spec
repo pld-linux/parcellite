@@ -19,12 +19,11 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Parcellite is a lightweight GTK+ clipboard manager.
 
 %description -l pl.UTF-8
-Parcellite to lekki zarząca schowka stworzony w GTK+.
+Parcellite to lekki zarządca schowka stworzony w GTK+.
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root)%{_bindir}/%{name}
