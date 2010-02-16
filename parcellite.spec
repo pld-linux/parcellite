@@ -50,9 +50,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# fix/update locale names
-rm -fr $RPM_BUILD_ROOT%{_datadir}/locale/pl_PL/*
-# pl exists: /usr/share/locale/pl/LC_MESSAGES:  parcellite.mo
+# duplicate of pl
+rm -fr $RPM_BUILD_ROOT%{_datadir}/locale/pl_PL
 
 %find_lang %{name}
 
