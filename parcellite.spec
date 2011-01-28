@@ -25,9 +25,6 @@ Parcellite is a lightweight GTK+ clipboard manager.
 %description -l pl.UTF-8
 Parcellite to lekki zarządca schowka stworzony w GTK+.
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %prep
 %setup -q
 %patch0 -p1
@@ -54,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 rm -fr $RPM_BUILD_ROOT%{_datadir}/locale/pl_PL
 
 %find_lang %{name}
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
