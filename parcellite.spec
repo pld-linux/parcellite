@@ -1,13 +1,13 @@
 Summary:	GTK+ clipboard manager
 Summary(pl.UTF-8):	zarządca schowska stworzony w GTK+
+######		/home/users/caleb/rpm/packages/../rpm-build-tools/rpm.groups: no such file
 Name:		parcellite
-Version:	0.9.2
+Version:	1.1.6
 Release:	1
 License:	GPL v3
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/project/parcellite/parcellite/%{name}-%{version}/parcellite-%{version}.tar.gz
-# Source0-md5:	a650f6fe0fec96827b30ca3218a2b4df
-Patch0:		%{name}-desktop.patch
+Source0:	http://downloads.sourceforge.net/parcellite/parcellite-%{version}.tar.gz
+# Source0-md5:	4b0a89aeb885a2f7d2ace3e4ea7e153e
 URL:		http://parcellite.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -27,7 +27,6 @@ Parcellite to lekki zarządca schowka stworzony w GTK+.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__intltoolize}
@@ -48,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # duplicate of pl
-rm -fr $RPM_BUILD_ROOT%{_datadir}/locale/pl_PL
+rm -fr $RPM_BUILD_ROOT%{_localedir}/pl_PL
 
 %find_lang %{name}
 
@@ -62,3 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/%{name}.1*
 %{_sysconfdir}/xdg/autostart/parcellite-startup.desktop
 %{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png
+%{_pixmapsdir}/%{name}.xpm
+%{_pixmapsdir}/%{name}.svg
