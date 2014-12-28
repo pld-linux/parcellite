@@ -11,7 +11,7 @@ Source0:	http://downloads.sourceforge.net/parcellite/parcellite-%{version}.tar.g
 URL:		http://parcellite.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 2.14.0
 BuildRequires:	gtk+2-devel >= 2.10.0
 BuildRequires:	intltool
