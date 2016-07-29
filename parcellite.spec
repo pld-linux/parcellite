@@ -5,7 +5,7 @@ Version:	1.1.9
 Release:	1
 License:	GPL v3
 Group:		X11/Applications
-Source0:	http://downloads.sourceforge.net/parcellite/parcellite-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/parcellite/%{name}-%{version}.tar.gz
 # Source0-md5:	6c3b70165c2dee9341a81a2a8481e446
 URL:		http://parcellite.sourceforge.net/
 BuildRequires:	autoconf
@@ -16,6 +16,7 @@ BuildRequires:	gtk+2-devel >= 2.10.0
 BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+Suggests:	xdotool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
