@@ -1,12 +1,12 @@
 Summary:	GTK+ clipboard manager
 Summary(pl.UTF-8):	zarządca schowska stworzony w GTK+
 Name:		parcellite
-Version:	1.1.9
+Version:	1.2.1
 Release:	1
 License:	GPL v3
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/parcellite/%{name}-%{version}.tar.gz
-# Source0-md5:	6c3b70165c2dee9341a81a2a8481e446
+# Source0-md5:	f7d5ca3a31c7a558cf56b77e4e7cdc6c
 URL:		http://parcellite.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
